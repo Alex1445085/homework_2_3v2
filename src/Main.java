@@ -8,13 +8,13 @@ public class Main {
         BicycleVehicle bicycle = new BicycleVehicle("bicycle1", 2);
         BicycleVehicle bicycle2 = new BicycleVehicle("bicycle2", 2);
 
+        Vehicle[] transport = new Vehicle[]{car, car2, truck, truck2, bicycle, bicycle2};
         ServiceStation station = new ServiceStation(){};
 
-        station.check(car, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck);
-        station.check(null, null, truck2);
+        for(Vehicle temp: transport) {
+            System.out.println("\nПроверяем " + temp.getModelName());
+            station.check(temp);
+            temp.service();
+        }
     }
 }
