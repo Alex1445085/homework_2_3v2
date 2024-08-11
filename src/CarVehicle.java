@@ -7,10 +7,14 @@ public class CarVehicle extends Vehicle {
     public void checkEngine() {
         System.out.println("Проверяем двигатель");
     }
-    public void service(){
+
+    public void service() {
         for (int i = 0; i < getWheelsCount(); i++) {
             updateTyre();
         }
         checkEngine();
     }
 }
+
+
+
