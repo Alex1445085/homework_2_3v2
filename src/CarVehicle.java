@@ -8,10 +8,12 @@ public class CarVehicle extends Vehicle {
         System.out.println("Проверяем двигатель");
     }
 
+    @Override
     public void service() {
-        for (int i = 0; i < getWheelsCount(); i++) {
+        /**for (int i = 0; i < getWheelsCount(); i++) {
             updateTyre();
-        }
+        }*/
+        super.service();
         checkEngine();
     }
 }

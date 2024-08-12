@@ -13,7 +13,7 @@ public class Vehicle implements ServiceStation{
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
-    public void servise() {
+    public void service() {
         for (int i = 0; i < getWheelsCount(); i++) {
             updateTyre();
         }

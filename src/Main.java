@@ -7,12 +7,14 @@ public class Main {
         TruckVehicle truck2 = new TruckVehicle("truck2", 8);
         BicycleVehicle bicycle = new BicycleVehicle("bicycle1", 2);
         BicycleVehicle bicycle2 = new BicycleVehicle("bicycle2", 2);
+
         Vehicle[] transport = new Vehicle[]{car, car2, truck, truck2, bicycle, bicycle2};
-        ServiceStation station = new ServiceStation(){};
+        //ServiceStation station = new ServiceStation(){};
 
         for(Vehicle temp: transport) {
             System.out.println("\nПроверяем " + temp.getModelName());
-            station.check(temp);
+            temp.check(temp);
+            //station.check(temp);
             temp.service();
         }
     }
